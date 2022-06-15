@@ -1,3 +1,6 @@
+[visitors-img]: https://visitor-badge.glitch.me/badge?page_id=Xiefeng69.EpiGNN
+[repo-url]: https://github.com/Xiefeng69/EpiGNN
+
 # EpiGNN
 
 [ECML-PKDD2022] The source codes and datasets for EpiGNN. Specifically, the codes are in the `\src`, while data is in the `\data`.
