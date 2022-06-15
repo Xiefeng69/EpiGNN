@@ -5,6 +5,8 @@
 
 [ECML-PKDD2022] The source codes and datasets for EpiGNN. Specifically, the codes are in the `\src`, while data is in the `\data`.
 
+[![visitors][visitors-img]][repo-url]
+
 ## 1. Introduction
 
 Epidemic forecasting is the key to effective control of epidemic transmission and helps the world mitigate the crisis that threatens public health. Epidemic forecasting need to face with nolinear temporal dependency and complex spatial transmission. Existing methods not fully exploit latent dependencies between regions and ignore the spatial effect which influence both regions' epidemic situation and the spread of epidemics. To better understand the transmission and evolution of epidemics, we propose EpiGNN, a novel graph neural network-based model for epidemic forecasting. Specifically, we design a transmission risk encoding module to characterize local and global spatial effects of regions and incorporate them into the model. Meanwhile, we develop a Region-Aware Graph Learner (RAGL) that takes transmission risk, geographical dependencies, and temporal information into account to better explore spatial-temporal dependencies between regions and make regions be aware of related regions' epidemic situation. The RAGL can also combine with external resources, such as human mobility, to further improve prediction performance. Comprehensive experiments on five epidemic-related datasets (including influenza and COVID-19) demonstrate the effectiveness of our proposed method and show that EpiGNN outperforms the state-of-the-art baselines by 9.48% in RMSE.
