@@ -46,6 +46,7 @@ python src/train.py --gpu 0 --lr 0.005 --horizon 5 --hidR 64 --hidA 64 --data re
 + epoch: the number of epochs of traning process.
 + patience: we conduct early stop with fixed patience.
 
+## Citation
 
 ```
 @inproceedings{xie2022epignn,
