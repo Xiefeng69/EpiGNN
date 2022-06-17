@@ -45,3 +45,14 @@ python src/train.py --gpu 0 --lr 0.005 --horizon 5 --hidR 64 --hidA 64 --data re
 + batch: batch size.
 + epoch: the number of epochs of traning process.
 + patience: we conduct early stop with fixed patience.
+
+
+```
+@inproceedings{xie2022epignn,
+  title={EpiGNN: Exploring Spatial Transmission with Graph Neural Network for Regional Epidemic Forecasting},
+  author={Xie, Feng and Zhang, Zhong and Li, Liang and Zhou, Bin and Yu, Songtan},
+  booktitle={Joint European Conference on Machine Learning and Knowledge Discovery in Databases},
+  year={2022},
+  organization={Springer}
+}
+```
