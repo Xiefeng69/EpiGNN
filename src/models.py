@@ -102,7 +102,7 @@ class EpiGNN(nn.Module):
         key = self.WK(temp_emb)
         key = self.dropout(key)
         attn = torch.bmm(query, key.transpose(1, 2))
-        attn = self.leakyrelu(attn)
+        #attn = self.leakyrelu(attn)
         attn = F.normalize(attn, dim=-1, p=2, eps=1e-12)
         attn = torch.sum(attn, dim=-1)
         attn = attn.unsqueeze(2)
