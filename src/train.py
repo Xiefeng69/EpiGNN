@@ -16,6 +16,7 @@ from scipy.stats.stats import pearsonr
 from models import *
 from data import *
 
+import stat
 import shutil
 import logging
 import glob
@@ -50,7 +51,7 @@ ap.add_argument('--save_dir', type=str,  default='save',help='dir path to save t
 ap.add_argument('--gpu', type=int, default=0,  help='choose gpu 0-10')
 ap.add_argument('--lamda', type=float, default=0.01,  help='regularize params similarities of states')
 ap.add_argument('--patience', type=int, default=100, help='patience default 100')
-ap.add_argument('--k', type=int, default=16,  help='kernels')
+ap.add_argument('--k', type=int, default=8,  help='kernels')
 ap.add_argument('--hidR', type=int, default=64,  help='hidden dim')
 ap.add_argument('--hidA', type=int, default=64,  help='hidden dim of attention layer')
 ap.add_argument('--hidP', type=int, default=1,  help='hidden dim of adaptive pooling')
@@ -97,7 +98,12 @@ if args.mylog:
     if not os.path.exists(tensorboard_log_dir):
         os.makedirs(tensorboard_log_dir)
     writer = SummaryWriter(tensorboard_log_dir)
-    shutil.rmtree(tensorboard_log_dir)
+    try:
+        shutil.rmtree(tensorboard_log_dir) # remove a folder
+    except PermissionError as e:
+        err_file_path = str(e).split("\'",2)[1]
+        if os.path.exists(err_file_path):
+            os.chmod(err_file_path, stat.S_IWUSR) # write by owner: https://blog.csdn.net/cute_boy_/article/details/119926001
     logger.info('tensorboard logging to %s', tensorboard_log_dir)
 
 data_loader = DataBasicLoader(args)
