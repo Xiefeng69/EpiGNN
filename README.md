@@ -3,7 +3,7 @@
 
 # EpiGNN
 
-[ECML-PKDD2022] The source codes and datasets for EpiGNN. Specifically, the codes are in the `\src`, while data is in the `\data`.
+[ECML-PKDD2022] The source codes and datasets for `EpiGNN: Exploring Spatial Transmission with Graph Neural Network for Regional Epidemic Forecasting`. Specifically, the codes are in the `\src`, while data is in the `\data`.
 
 [![visitors][visitors-img]][repo-url]
 
@@ -36,15 +36,21 @@ python src/train.py --gpu 0 --lr 0.005 --horizon 5 --hidR 64 --hidA 64 --data re
 
 ### 3.1 Parameters
 
-+ hidR: the hidden dimension of model.
-+ hidA: the attention hidden dimension.
-+ data: the confirmed case data in the folder `\data`.
-+ sim_mat: the adjacent matrix.
-+ lr: learning rate.
-+ hw: the look-back window of AutoRegresssive Component.
-+ batch: batch size.
-+ epoch: the number of epochs of traning process.
-+ patience: we conduct early stop with fixed patience.
++ *hidR*: the hidden dimension of model.
++ *hidA*: the attention hidden dimension in GTR encoder.
++ *data*: the confirmed case data in the folder `\data`.
++ *sim_mat*: the adjacent matrix.
++ *lr*: learning rate.
++ *hw*: the look-back window of AutoRegresssive Component.
++ *batch*: batch size.
++ *epoch*: the number of epochs of traning process.
++ *patience*: we conduct early stop with fixed patience.
+
+## More about EPIDEMICs
+
++ Seasonal influenza: [https://www.who.int/en/news-room/fact-sheets/detail/influenza-(seasonal)](https://www.who.int/en/news-room/fact-sheets/detail/influenza-(seasonal))
++ COVID-19 pandemic: [https://covid19.who.int/](https://covid19.who.int/)
++ The epidemic surveillance system: [http://covid-19.lzu.edu.cn/ycxt.htm](http://covid-19.lzu.edu.cn/ycxt.htm)
 
 ## Citation
 
