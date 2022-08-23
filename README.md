@@ -50,7 +50,7 @@ python src/train.py --gpu 0 --lr 0.005 --horizon 5 --hidR 64 --hidA 64 --data re
 
 + Seasonal influenza: [https://www.who.int/en/news-room/fact-sheets/detail/influenza-(seasonal)](https://www.who.int/en/news-room/fact-sheets/detail/influenza-(seasonal))
 + COVID-19 pandemic: [https://covid19.who.int/](https://covid19.who.int/)
-+ The epidemic surveillance system of Lanzhou University: [http://covid-19.lzu.edu.cn/ycxt.htm](http://covid-19.lzu.edu.cn/ycxt.htm)
++ The epidemic surveillance system of Lanzhou University: [http://covid-19.lzu.edu.cn/index.htm](http://covid-19.lzu.edu.cn/index.htm)
 
 ## Citation
 
